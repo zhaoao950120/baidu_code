@@ -1,0 +1,75 @@
+<!-- <import src="../../bdParse/bdParse.swan" />
+<view class="box">
+    <view class="title">{{obj.headline}}</view>
+    <view class="info">
+        <view class="writer">作者：{{obj.author}}</view>
+        <view class="date">时间：{{swan.formatDate(obj.createTime)}}</view>
+        <filter module="swan">
+                        export default {
+                            formatDate: function (value) {
+                                var date1 = value 
+                                // console.log(date1)
+                                let date = new Date(date1);
+                                let y = date.getFullYear();
+                                let MM = date.getMonth() + 1;
+                                MM = MM < 10 ? ('0' + MM) : MM;
+                                let d = date.getDate();
+                                d = d < 10 ? ('0' + d) : d;
+                                let h = date.getHours();
+                                h = h < 10 ? ('0' + h) : h;
+                                let m = date.getMinutes();
+                                m = m < 10 ? ('0' + m) : m;
+                                let s = date.getSeconds();
+                                s = s < 10 ? ('0' + s) : s;
+                                return y + '-' + MM + '-' + d + ' ' + h + ':' + m + ':' + s;
+                            }
+                        }
+                    </filter>
+    </view>
+    <view class="content" ><rich-text nodes="{{content}}"></rich-text></view>
+    <view class="source">来源：{{obj.source}}</view>
+    <view class="statement"> <text class="selected">【免责声明】</text>本文仅代表作者本人观点，与网站无关。本网站对文中陈述、观点判断保持中立，不对所包含内容的准确性、可靠性或完整性提供任何明示或暗示的保证。请读者仅作参考，并请自行承担全部责任。</view>
+        <view class="bottom">
+            <view class="rec">推荐阅读</view>
+            <view class="list">
+                    <block  s-for="item,index in list">
+                        <view class="list_box" datas="{{item.articleId}}" data-classid="{{item.columnId}}" bindtap="gotoPage">
+                            <view class="left">
+                                <view class="title">{{item.headline}}</view>
+                                <view class="time">{{swan.formatDate(item.createTime)}}</view>
+                                <filter module="swan">
+                                    export default {
+                                        formatDate: function (value) {
+                                            var date1 = value 
+                                            // console.log(date1)
+                                            let date = new Date(date1);
+                                            let y = date.getFullYear();
+                                            let MM = date.getMonth() + 1;
+                                            MM = MM < 10 ? ('0' + MM) : MM;
+                                            let d = date.getDate();
+                                            d = d < 10 ? ('0' + d) : d;
+                                            let h = date.getHours();
+                                            h = h < 10 ? ('0' + h) : h;
+                                            let m = date.getMinutes();
+                                            m = m < 10 ? ('0' + m) : m;
+                                            let s = date.getSeconds();
+                                            s = s < 10 ? ('0' + s) : s;
+                                            return y + '-' + MM + '-' + d + ' ' + h + ':' + m + ':' + s;
+                                        }
+                                    }
+                                </filter>
+                            </view>
+                            <view class="right">
+                                <view class="img_box"><image src="{{item.imgUrl}}" class="arc_image"></image></view>
+                            </view>
+                        </view>
+                        <view class="clean"></view>
+                    </block>
+            </view>
+    </view>
+</view> -->
+<view>
+    <web-view  src="{{url}}"></web-view>
+</view>
+
+    

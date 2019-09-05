@@ -1,0 +1,122 @@
+/**
+ * @file index.css
+ * @author swan
+ */
+ .box{
+       overflow-x: hidden;
+ }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.logo {
+    width: 375rpx;
+    height: 60rpx;
+    background-image: url("../../images/smartapp.png");
+    background-size: 375rpx;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 380rpx;
+    width: 100%;
+}
+.swiper_box{
+    height: 180px
+}
+.swiper_box image{
+    width: 100%;
+    height: 180px
+}
+.swiper_text_box{
+    width:100%;
+    background:rgba(0,0,0,0.5);
+    position: relative;
+    padding:0.2rem 0.5rem;
+    bottom:2rem;
+    height:2rem;
+    overflow:hidden;
+    color: #FFF;
+    text-align: center;
+    box-sizing: border-box;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.swiper_text{
+    width: 100%;
+  
+}
+
+.list_box{
+    width:100%;
+    height:200rpx;
+    padding:25rpx;
+    border-top:1px solid #F2F2F2;
+    box-sizing: border-box
+}
+.list_box:nth-child(1){
+    border: none
+}
+.left{
+   float: left;
+   width:70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title{
+  font-size: 0.9rem;
+  height: 80rpx;
+  min-height: 110rpx;
+  display: box;
+box-orient: vertical;
+text-overflow: ellipsis;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.time{
+   overflow: hidden;
+   line-height: 0.9rem;
+   color:#aaa;
+   font-size: 0.8rem;
+}
+.right{
+   float: right;
+   width:30%;
+   height:100%;
+}
+.arc_data{
+     border-top: 1px solid  #F2F2F2;
+}
+.img_box {
+    width:95%;
+    height:95%;
+    margin: 0 auto;
+}
+.img_box image{
+    margin: 0 auto;
+    text-align: center;
+    width:100%;
+    height:100%;
+    border-radius: 0.2rem;
+}
+.clean{
+    clear: both
+}
+.list{
+    height: 100%
+}
+.scroll-view{
+    height: 50rem;
+    
+}

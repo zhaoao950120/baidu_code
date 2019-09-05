@@ -1,0 +1,42 @@
+<scroll-view class="tab-list" scroll-x scroll-with-animation>
+    <view s-for="item,index in tabList" class="tab-item {{curTab===index ? 'selected-tab':''}}" data-index="{{item.index}}" bindtap="selectTab" data="{{item.id}}">{{item.name}}</view>
+</scroll-view>
+<view class="page">
+    <scroll-view  scroll-y ="true" scroll-x="false" class="scroll-view" bind:scrolltoupper="upper" bind:scrolltolower="lower">
+        <view class="list">
+            <block  s-for="item,index in obj">
+                    <view class="list_box" datas="{{item.articleId}}" bindtap="gotoPage">
+                        <view class="left">
+                            <view class="title">{{item.headline}}</view>
+                            <view class="time">{{swan.formatDate(item.createTime)}}</view>
+                            <filter module="swan">
+                                export default {
+                                    formatDate: function (value) {
+                                        var date1 = value 
+                                        // console.log(date1)
+                                        let date = new Date(date1);
+                                        let y = date.getFullYear();
+                                        let MM = date.getMonth() + 1;
+                                        MM = MM < 10 ? ('0' + MM) : MM;
+                                        let d = date.getDate();
+                                        d = d < 10 ? ('0' + d) : d;
+                                        let h = date.getHours();
+                                        h = h < 10 ? ('0' + h) : h;
+                                        let m = date.getMinutes();
+                                        m = m < 10 ? ('0' + m) : m;
+                                        let s = date.getSeconds();
+                                        s = s < 10 ? ('0' + s) : s;
+                                        return y + '-' + MM + '-' + d + ' ' + h + ':' + m + ':' + s;
+                                    }
+                                }
+                            </filter>
+                        </view>
+                        <view class="right">
+                            <view class="img_box"><image src="{{item.imgUrl}}" class="arc_image"></image></view>
+                        </view>
+                    </view>
+                    <view class="clean"></view>
+            </block>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,70 @@
+<!-- index.swan -->
+<!-- <import src="../template/lunbo.swan" />
+<import src="../template/list.swan" /> -->
+<view class="box">
+    <scroll-view  scroll-y ="true" scroll-x="false" class="scroll-view" bind:scrolltoupper="upper" bind:scrolltolower="lower">
+        <!-- 分类 -->
+        <view class="classfly">
+            <scroll-view class="tab-list" scroll-x scroll-with-animation>
+                <view s-for="item,index in tabList" class="tab-item {{curTab===index ? 'selected-tab':''}}" data-index="{{index}}" bindtap="selectTab" data-classid="{{item.id}}">
+                     <view class="className">{{item.name}}</view>
+                </view>
+            </scroll-view>
+        </view>
+        <!-- 轮播图 -->
+        <view class="{{lunboFlag?'show':'hide'}} swiper_box" >
+            <swiper  indicator-dots="true" interval="3000" circular="true" style="height:180px" indicator-color="#fff" indicator-active-color="red" >
+                <block s-for="item, index in slideshowList">
+                    <swiper-item  datas="{{item.articleId}}" bindtap="gotoPage" class="swiper_box" s-if="index<5">
+                            <image src="{{item.imgUrl}}" class="swiper_images"></image>
+                            <view class="swiper_text_box">
+                                <text class="swiper_text">{{item.headline}}</text>
+                            </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+            <!-- <view class="dots">
+                <block wx:for="{{slideshowList}}" wx:key>
+                    <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+                </block>
+            </view> -->
+        </view>
+        <!-- 列表 -->
+            <view class="list">
+            <block  s-for="item,index in list">
+                <view class="list_box" datas="{{item.articleId}}" data-classid="{{item.columnId}}" bindtap="gotoPage">
+                    <view class="left">
+                        <view class="img_box"><image src="{{item.imgUrl}}" class="arc_image"></image></view>
+                    </view>
+                    <view class="right">
+                        <view class="title">{{item.headline}}</view>
+                        <view class="time">{{swan.formatDate(item.createTime)}}</view>
+                        <filter module="swan">
+                            export default {
+                                formatDate: function (value) {
+                                    var date1 = value 
+                                    // console.log(date1)
+                                    let date = new Date(date1);
+                                    let y = date.getFullYear();
+                                    let MM = date.getMonth() + 1;
+                                    MM = MM < 10 ? ('0' + MM) : MM;
+                                    let d = date.getDate();
+                                    d = d < 10 ? ('0' + d) : d;
+                                    let h = date.getHours();
+                                    h = h < 10 ? ('0' + h) : h;
+                                    let m = date.getMinutes();
+                                    m = m < 10 ? ('0' + m) : m;
+                                    let s = date.getSeconds();
+                                    s = s < 10 ? ('0' + s) : s;
+                                    return y + '-' + MM + '-' + d + ' ' + h + ':' + m + ':' + s;
+                                }
+                            }
+                        </filter>
+                    </view>
+                    
+                </view>
+                <view class="clean"></view>
+            </block>
+        </view>
+    </scroll-view>
+</view>

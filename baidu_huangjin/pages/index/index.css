@@ -1,0 +1,145 @@
+.box{
+    overflow-x: hidden;
+    background: #eee
+ }
+ .classfly{
+     background-color: #fff;
+     height: 104rpx;
+ }
+.show{
+    display: block
+}
+.hide{
+    display: none
+}
+.swiper_box{
+    height: 180px
+}
+.swiper_box image{
+    width: 100%;
+    height: 180px
+}
+.swiper_text_box{
+    width:100%;
+    background:rgba(0,0,0,0.5);
+    position: relative;
+    padding:0.2rem 0.5rem;
+    bottom:3rem;
+    height:3rem;
+    overflow:hidden;
+    color: #FFF;
+    text-align: center;
+    box-sizing: border-box;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size: 15px
+}
+.swiper_text{
+    width: 100%;
+}
+.selected-tab {
+    color: #2c7af0;
+    border-bottom: 2px solid #2c7af0;
+    box-sizing: border-box
+}
+.list_box{
+    width:100%;
+    height:200rpx;
+    padding:25rpx;
+    border-top:1px solid #F2F2F2;
+    box-sizing: border-box;
+    display: flex;
+    background: #fff;
+    margin: 20rpx 0
+}
+.list_box:nth-child(1){
+    border: none
+}
+.left{
+   width:30%;
+   height:100%;
+   margin-right:0.5rem;
+}
+
+.title{
+  font-size: 0.9rem;
+  height: 80rpx;
+  max-height: 80rpx;
+  /* min-height: 110rpx; */
+  display:  -webkit-box;
+box-orient: vertical;
+text-overflow: ellipsis;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.time{
+    overflow: hidden;
+    line-height: 1.2rem;
+    color:#aaa;
+    font-size: 0.8rem;
+}
+.right{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.arc_data{
+     border-top: 1px solid  #F2F2F2;
+}
+.img_box {
+    width:95%;
+    height:95%;
+    margin: 0 auto;
+}
+.img_box image{
+    margin: 0 auto;
+    text-align: center;
+    width:100%;
+    height:100%;
+    border-radius: 0.2rem;
+}
+.clean{
+    clear: both
+}
+.list{
+    /* height: 100%; */
+    background: #eee;
+    /* overflow: hidden */
+}
+.scroll-view{
+    height: 50rem;
+}
+.tab-list{
+    width:100%;
+    /* height:5rem; */
+    display:inline-block;
+    white-space:nowrap;
+    /* margin-top: 0.6rem */
+     color: rgba(61, 61, 61, 0.993);
+}
+.tab-item{
+    margin:0 4.7%;
+    display:inline-block;
+    vertical-align:middle;
+    text-align:center;
+}
+.tab-item .top{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-top: 0.5rem
+}
+.tab-item image{
+    width: 100%;
+    height: 100%;
+}
+.className{
+    line-height: 100rpx;
+    font-size: 38rpx;
+    font-family: STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
+}
+
+/* 分页器 */
+

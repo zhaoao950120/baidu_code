@@ -1,0 +1,15 @@
+      <!-- 轮播图 -->
+      <template name="lunbo">
+        <view class="{{lunboFlag?'show':'hide'}}">
+            <swiper autoplay="true" indicator-dots="true" interval="3000" circular="true" style="height:180px">
+                <block s-for="item, index in slideshowList">
+                    <swiper-item  datas="{{item.articleId}}" bindtap="gotoPage" class="swiper_box" s-if="index<5">
+                            <image src="{{item.imgUrl}}" class="swiper_images"></image>
+                            <view class="swiper_text_box">
+                                <text class="swiper_text">{{item.headline}}</text>
+                            </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+      </template>

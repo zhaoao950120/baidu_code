@@ -1,0 +1,44 @@
+<!-- index.swan -->
+<!-- <import src="../template/lunbo.swan" />
+<import src="../template/list.swan" /> -->
+<view class="box">
+    <scroll-view  scroll-y ="true" scroll-x="false" class="scroll-view" bind:scrolltoupper="upper" bind:scrolltolower="lower">
+        <!-- 分类 -->
+        <view class="classfly">
+            <scroll-view class="tab-list" scroll-x scroll-with-animation>
+                <view s-for="item,index in tabList" class="tab-item {{curTab===index ? 'selected-tab':''}}" data-index="{{index}}" bindtap="selectTab" data-classid="{{item.id}}">
+                     <view class="className">{{item.name}}</view>
+                </view>
+            </scroll-view>
+        </view>
+        <!-- <ad appid="dac5fd6b" apid="6505079" class="ad" type="banner" style="background:#fff"></ad> -->
+        <!-- 轮播图 -->
+        <view class="{{lunboFlag?'show':'hide'}} swiper_box" >
+            <swiper autoplay="true" interval="3000" circular="true" style="height:180px">
+                <block s-for="item, index in slideshowList">
+                    <swiper-item  datas="{{item.id}}" bindtap="gotoPage" class="swiper_box" s-if="index<5" lazy-load="true">
+                            <image src="{{item.titlepic}}" class="swiper_images"></image>
+                            <view class="swiper_text_box">
+                                <text class="swiper_text">{{item.title}}</text>
+                            </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <!-- 列表 -->
+            <view class="list">
+            <block  s-for="item,index in list">
+                <view class="list_box" datas="{{item.id}}" data-classid="{{item.classid}}" bindtap="gotoPage">
+                    <view class="left">
+                        <view class="img_box"><image src="{{item.titlepic}}" class="arc_image"></image></view>
+                    </view>
+                    <view class="right">
+                        <view class="title">{{item.title}}</view>
+                        <view class="time">{{item.truetime}}</view>
+                    </view>
+                </view>
+                <view class="clean"></view>
+            </block>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,31 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/list/list",
+        "pages/detail/detail"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "中亿财经黄金网",
+        "backgroundTextStyle": "light"
+    },
+     "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath":"images/icon_home1.png",
+                "selectedIconPath":"images/icon_home.png",
+                "text": "推荐"
+	        },
+            {
+                "pagePath": "pages/list/list",
+                "text": "资讯",
+                "iconPath":"images/icon_list1.png",
+                "selectedIconPath":"images/icon_list.png"
+            }
+        ],
+        "borderStyle":"black",
+        "color":"#999"
+    }
+}
